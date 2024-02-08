@@ -1,0 +1,10 @@
+{
+  "extends": "@edm/typescript-config/preset.json",
+  "include": ["src", "index.ts"],
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "tsBuildInfoFile": "node_modules/.cache/.tsbuildinfo"
+  }
+}
