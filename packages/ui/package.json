@@ -1,5 +1,5 @@
 {
-  "name": "@acme/ui",
+  "name": "@edm/ui",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -10,18 +10,18 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "tsup src/index.tsx --format esm,cjs --dts --external react",
-    "dev": "tsup src/index.tsx --format esm,cjs --watch --dts --external react",
-    "lint": "eslint . --max-warnings 0",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@edm/eslint-config": "workspace:*",
+    "@edm/preset": "workspace:*",
+    "@edm/typescript-config": "workspace:*",
+    "@pandacss/dev": "^0.30.1",
     "@types/react": "^18.2.46",
     "@types/react-dom": "^18.2.18",
     "eslint": "^8.56.0",
+    "postcss": "^8.4.35",
     "react": "^18.2.0",
-    "@repo/typescript-config": "workspace:*",
     "tsup": "^8.0.1",
     "typescript": "^5.3.3"
   },
