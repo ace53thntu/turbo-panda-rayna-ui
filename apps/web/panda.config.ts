@@ -21,4 +21,6 @@ export default defineConfig({
   emitPackage: true,
 
   presets: [edmPandaPreset],
+
+  jsxFramework: "react",
 });
