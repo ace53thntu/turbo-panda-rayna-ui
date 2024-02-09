@@ -1,6 +1,5 @@
 import { defineConfig } from "@pandacss/dev";
-// import { edmPandaPreset } from "./src/preset";
-import { edmPandaPreset } from "@edm/preset";
+import { edmPandaPreset } from "./src/preset";
 
 export default defineConfig({
   // Whether to use css reset

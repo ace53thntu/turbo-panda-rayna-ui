@@ -1,4 +1,4 @@
-import { edmPandaPreset } from "@edm/preset";
+import { edmPandaPreset } from "./preset";
 
-export * from "./button";
+export * from "./components";
 export { edmPandaPreset };

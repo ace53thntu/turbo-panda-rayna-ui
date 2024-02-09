@@ -9,8 +9,7 @@
     "changeset": "changeset",
     "version-packages": "changeset version",
     "release": "turbo run build --filter=docs^... && changeset publish",
-    "gen:workspace": "turbo gen workspace",
-    "panda:gen": "turbo run panda"
+    "gen:workspace": "turbo gen workspace"
   },
   "devDependencies": {
     "@changesets/cli": "^2.27.1",

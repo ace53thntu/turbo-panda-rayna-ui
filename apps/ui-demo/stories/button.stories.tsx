@@ -6,17 +6,19 @@ const meta: Meta<typeof Button> = {
   title: "Example/Button",
   component: Button,
   tags: ["autodocs"],
-  parameters: {
-    // More on how to position stories at: https://storybook.js.org/docs/configure/story-layout
-    layout: "fullscreen",
+  argTypes: {
+    size: {
+      control: {
+        type: "select",
+        options: ["sm", "md"],
+      },
+    },
   },
 };
 
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary = {
-  args: {
-    children: "Hello123 🐼!",
-  },
-} satisfies Story;
+export const Primary: Story = {
+  render: (args) => <Button {...args}>Click me!</Button>,
+};

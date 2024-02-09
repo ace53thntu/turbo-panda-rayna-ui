@@ -13,6 +13,7 @@
     "@storybook/react": "^7.6.13",
     "@storybook/react-vite": "^7.6.13",
     "@storybook/test": "^7.6.13",
+    "concurrently": "^8.2.2",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -21,7 +22,9 @@
   "scripts": {
     "prepare": "panda codegen",
     "dev": "panda codegen && storybook dev -p 6006",
-    "build": "storybook build"
+    "build": "storybook build",
+    "watch": "panda codegen -w --clean",
+    "dev:watch": "concurrently \"pnpm dev\" \"pnpm watch\""
   },
   "dependencies": {
     "@edm/design-system": "workspace:*"
