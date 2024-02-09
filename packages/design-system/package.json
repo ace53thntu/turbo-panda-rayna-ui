@@ -7,7 +7,7 @@
   "type": "module",
   "scripts": {
     "prepare": "panda codegen",
-    "dev": "pnpm build --watch",
+    "dev": "panda codegen && pnpm build --watch",
     "build": "tsup"
   },
   "devDependencies": {
