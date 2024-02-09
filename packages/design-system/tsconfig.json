@@ -1,0 +1,5 @@
+{
+  "extends": "@edm/typescript-config/react-library.json",
+  "include": ["src", "styled-system"],
+  "exclude": ["dist", "build", "node_modules"]
+}
