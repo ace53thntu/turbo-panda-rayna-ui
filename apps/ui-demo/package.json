@@ -9,6 +9,7 @@
     "@storybook/addon-links": "^7.6.13",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.13",
+    "@storybook/builder-vite": "^7.6.13",
     "@storybook/react": "^7.6.13",
     "@storybook/react-vite": "^7.6.13",
     "@storybook/test": "^7.6.13",
@@ -20,7 +21,7 @@
   "scripts": {
     "prepare": "panda codegen",
     "dev": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build": "storybook build"
   },
   "dependencies": {
     "@edm/design-system": "workspace:*"
