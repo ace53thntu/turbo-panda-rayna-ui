@@ -15,7 +15,7 @@
   "scripts": {
     "build": "tsup src/index.ts --format=esm,cjs --dts --external @pandacss/dev",
     "build-fast": "tsup src/index.ts --format=esm,cjs --no-dts",
-    "dev": "pnpm build-fast --watch",
+    "dev": "pnpm build --watch",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
