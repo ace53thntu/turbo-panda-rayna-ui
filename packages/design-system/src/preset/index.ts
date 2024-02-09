@@ -4,6 +4,7 @@ import { defineConfig } from "@pandacss/dev";
 // =================================================================
 import { tokens } from "./tokens";
 import { globalCss } from "./global-css";
+import { recipes } from "./recipes";
 
 export const edmPandaPreset = defineConfig({
   presets: [pandaPreset],
@@ -11,6 +12,7 @@ export const edmPandaPreset = defineConfig({
   theme: {
     extend: {
       tokens,
+      recipes,
     },
   },
 });

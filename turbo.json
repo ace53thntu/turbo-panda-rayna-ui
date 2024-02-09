@@ -10,10 +10,6 @@
       "cache": false,
       "persistent": true
     },
-    "panda": {
-      "cache": false,
-      "persistent": true
-    },
     "clean": {
       "cache": false
     }

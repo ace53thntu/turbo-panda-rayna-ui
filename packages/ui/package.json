@@ -14,7 +14,6 @@
   },
   "devDependencies": {
     "@edm/eslint-config": "workspace:*",
-    "@edm/preset": "workspace:*",
     "@edm/typescript-config": "workspace:*",
     "@pandacss/dev": "^0.30.1",
     "@types/react": "^18.2.46",
