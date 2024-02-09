@@ -1,13 +1,17 @@
 import { defineConfig } from "@pandacss/dev";
-// import { edmPandaPreset } from "./src/preset";
-import { edmPandaPreset } from "@edm/preset";
+import { edmPandaPreset } from "@edm/design-system";
 
 export default defineConfig({
   // Whether to use css reset
   preflight: true,
 
   // Where to look for your css declarations
-  include: ["./src/**/*.{js,jsx,ts,tsx}"],
+  include: [
+    "./node_modules/@edm/design-system/src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
+    "./stories/**/*.{js,jsx,ts,tsx}",
+  ],
 
   // Files to exclude
   exclude: [],
@@ -21,7 +25,7 @@ export default defineConfig({
   outdir: "styled-system",
   emitPackage: true,
 
-  presets: [edmPandaPreset],
-
   jsxFramework: "react",
+
+  presets: [edmPandaPreset],
 });
