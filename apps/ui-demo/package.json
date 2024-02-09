@@ -20,7 +20,7 @@
   },
   "scripts": {
     "prepare": "panda codegen",
-    "dev": "storybook dev -p 6006",
+    "dev": "panda codegen && storybook dev -p 6006",
     "build": "storybook build"
   },
   "dependencies": {
