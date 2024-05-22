@@ -11,6 +11,7 @@ export const button = defineRecipe({
     rounded: "base",
     fontWeight: "semibold",
     cursor: "pointer",
+    color: "neutral.shades.white",
 
     _focusVisible: {
       outline: "none",
@@ -23,23 +24,63 @@ export const button = defineRecipe({
 
   variants: {
     variant: {
-      primary: {
+      solid: {
         bg: "primary.500",
-        color: "neutral.shades.white",
-
+        _hover: {
+          bg: "primary.400",
+        },
+        _focus: {
+          bg: "primary.700",
+        },
         _disabled: {
           bg: "gray.300",
           _hover: {
             bg: "gray.300",
           },
         },
+      },
+      outline: {
+        // bg: "neutral.shades.white",
+        // borderStyle: "solid",
+        // borderWidth: 1.5,
+        // borderColor: "primary.600",
+        // color: "primary.600",
+        // _hover: {
+        //   bg: "primary.50",
+        // },
+        // _focus: {
+        //   borderWidth: 2,
+        //   bg: "primary.50",
+        //   color: "primary.700",
+        //   borderColor: "primary.700",
+        // },
+        // _disabled: {
+        //   borderWidth: 2,
+        //   bg: "neutral.shades.white",
+        //   borderColor: "gray.100",
+        //   color: "gray.400",
+        //   _hover: {
+        //     bg: "neutral.shades.white",
+        //   },
+        // },
+      },
+      ghost: {
+        bg: "transparent",
+      },
 
+      grey: {
+        bg: "gray.500",
         _hover: {
-          bg: "primary.400",
+          bg: "gray.700",
         },
-
         _focus: {
-          bg: "primary.700",
+          bg: "gray.900",
+        },
+        _disabled: {
+          bg: "gray.300",
+          _hover: {
+            bg: "gray.300",
+          },
         },
       },
     },
@@ -60,10 +101,75 @@ export const button = defineRecipe({
         p: "4",
       },
     },
+    colorScheme: {
+      primary: {
+        // bg: "primary.500",
+        // _hover: {
+        //   bg: "primary.400",
+        // },
+        // _focus: {
+        //   bg: "primary.700",
+        // },
+        // _disabled: {
+        //   bg: "gray.300",
+        //   _hover: {
+        //     bg: "gray.300",
+        //   },
+        // },
+      },
+      secondary: {
+        // borderColor: "primary.600",
+        // color: "primary.600",
+        // _hover: {
+        //   bg: "primary.50",
+        // },
+        // _focus: {
+        //   bg: "primary.50",
+        //   color: "primary.700",
+        //   borderColor: "primary.700",
+        // },
+        // _disabled: {
+        //   bg: "neutral.shades.white",
+        //   borderColor: "gray.100",
+        //   color: "gray.400",
+        //   _hover: {
+        //     bg: "neutral.shades.white",
+        //   },
+        // },
+      },
+      destructive: {
+        bg: "semantics.error.500",
+        _hover: {
+          bg: "semantics.error.300",
+        },
+        _focus: {
+          bg: "semantics.error.700",
+        },
+        _disabled: {
+          bg: "gray.300",
+          _hover: {
+            bg: "gray.300",
+          },
+        },
+      },
+    },
   },
 
+  compoundVariants: [
+    {
+      variant: "outline",
+      colorScheme: "primary",
+      css: {
+        border: "2px solid blue",
+      },
+    },
+  ],
+
   defaultVariants: {
-    variant: "primary",
+    variant: "solid",
     size: "sm",
+    colorScheme: "primary",
   },
+
+  jsx: ["Button"],
 });
