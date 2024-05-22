@@ -4,7 +4,13 @@
   "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "type": "module",
+  "module": "dist/index.mjs",
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "prepare": "panda codegen",
     "dev": "pnpm build --watch",

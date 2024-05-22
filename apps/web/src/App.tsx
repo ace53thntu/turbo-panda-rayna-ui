@@ -1,18 +1,19 @@
 import "./App.css";
 import { Button } from "@edm/design-system";
-import { PlusIcon } from "@radix-ui/react-icons";
-import { css } from "styled-system/css";
+// import { PlusIcon } from "@radix-ui/react-icons";
+// import { css } from "styled-system/css";
+// import { button } from "styled-system/recipes";
 
 function App() {
   return (
     <>
       <div className="card">
-        <Button size={"iconLarge"}>
-          <PlusIcon className={css({ width: "6", height: "6" })} />
+        <Button variant={"outline"} colorScheme={"secondary"}>
+          Click me
         </Button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
+        <Button>Click me state</Button>
+
+        {/* <button className={button({ variant: "outline", colorScheme: "secondary" })}>Click Me</button> */}
       </div>
     </>
   );
